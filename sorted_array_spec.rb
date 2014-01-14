@@ -71,7 +71,7 @@ describe SortedArray do
 
   describe '#first_larger_index' do
     before do
-      @source = [2,3,4,7,9]
+      @source = [2,3,4,7,9].sort
       @sorted_array = SortedArray.new
       @sorted_array.internal_arr = @source
     end
@@ -91,7 +91,7 @@ describe SortedArray do
       @sorted_array.internal_arr = [5,6]
       @sorted_array.first_larger_index(4).should == 0
       @sorted_array.first_larger_index(6).should == 1
-      @sorted_array.first_larger_index(8).should == 2
+      @sorted_array.first_larger_index(8).should == 2 
     end
 
     it 'can put an existing element on either side' do
