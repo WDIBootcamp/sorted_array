@@ -54,7 +54,7 @@ describe SortedArray do
   end
   describe '#add' do
     before do
-      @source = [4,7,3,9,2]
+      @source = [4,7,3,9,2].sort
       @sorted_array = SortedArray.new(@source)
     end
     it 'can add an element' do
@@ -89,9 +89,9 @@ describe SortedArray do
 
     it 'can pick before, after or between two elements' do
       @sorted_array.internal_arr = [5,6]
-      @sorted_array.first_larger_index(4).should == 0
-      @sorted_array.first_larger_index(6).should == 1
-      @sorted_array.first_larger_index(8).should == 2 
+      @sorted_array.first_larger_index(4).should == 0 #works
+      @sorted_array.first_larger_index(6).should == 1 #works
+      @sorted_array.first_larger_index(8).should == 2 #works
     end
 
     it 'can put an existing element on either side' do
