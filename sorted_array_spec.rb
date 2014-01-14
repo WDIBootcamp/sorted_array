@@ -54,7 +54,7 @@ describe SortedArray do
   end
   describe '#add' do
     before do
-      @source = [4,7,3,9,2].sort
+      @source = [4,7,3,9,2]
       @sorted_array = SortedArray.new(@source)
     end
     it 'can add an element' do
@@ -71,7 +71,7 @@ describe SortedArray do
 
   describe '#first_larger_index' do
     before do
-      @source = [2,3,4,7,9].sort
+      @source = [2,3,4,7,9]
       @sorted_array = SortedArray.new
       @sorted_array.internal_arr = @source
     end
